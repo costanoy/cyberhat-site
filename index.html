@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyberhat</title>
+<meta name="description" content="Cyberhat: apps, sites e jogos independentes.">
+<link rel="canonical" href="https://cyberhat.com.br/">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#111111">
+<meta property="og:title" content="Cyberhat">
+<meta property="og:description" content="Apps, sites e jogos independentes.">
+<meta property="og:url" content="https://cyberhat.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://cyberhat.com.br/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblema da Cyberhat: um chapéu cibernético laranja com olho vermelho">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Zen+Kaku+Gothic+New:wght@500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<div class="site">
+
+<header class="header">
+  <div class="header__inner">
+    <a class="brand" href="#topo">
+      <img class="brand__logo" src="assets/logo-gf.png" alt="" width="922" height="696">
+      <span class="brand__name">CYBERHAT</span>
+    </a>
+    <nav class="nav">
+      <a class="nav__link" href="#projetos" data-i18n="navProjects">Projetos</a>
+      <a class="nav__link" href="#sobre" data-i18n="navAbout">Sobre</a>
+      <div class="lang" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+        <button type="button" class="lang__btn" data-lang="pt" aria-pressed="true">PT</button>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="topo" class="hero">
+    <div class="hero__stripe" aria-hidden="true"></div>
+    <div class="hero__dots" aria-hidden="true"></div>
+    <span class="hero__kana" aria-hidden="true">サイバーハット</span>
+    <div class="hero__inner">
+      <div class="hero__text">
+        <img class="hero__logo" src="assets/logo-gf.png" alt="Cyberhat" width="922" height="696">
+        <h1 class="hero__title" data-i18n="tagline">Apps, sites e jogos independentes.</h1>
+        <p class="hero__sub" data-i18n="sub">A Cyberhat cria e publica produtos próprios desde 2017: ferramentas do dia a dia, serviços para empresas e jogos para celular.</p>
+        <a class="hero__cta" href="#projetos"><span data-i18n="see">Ver projetos</span> <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero__visual">
+        <div class="collage">
+          <button type="button" class="poster poster--duelel" data-open="duelel">
+            <span class="poster__frame"><video src="videos/duelel.webm#t=1.5" muted playsinline preload="metadata" aria-hidden="true"></video></span>
+            <span class="poster__tag">Duelel</span>
+          </button>
+          <button type="button" class="poster poster--multi" data-open="multistreams">
+            <span class="poster__frame"><video src="videos/multistreams.webm#t=1.5" muted playsinline preload="metadata" aria-hidden="true"></video></span>
+            <span class="poster__tag">Multistreams</span>
+          </button>
+          <button type="button" class="poster poster--bee" data-open="beebee">
+            <span class="poster__frame"><video src="videos/bee-bee.webm#t=1.5" muted playsinline preload="metadata" aria-hidden="true"></video></span>
+            <span class="poster__tag">Bee Bee</span>
+          </button>
+          <span class="collage__seal" data-i18n="since">Desde 2017</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker__track"></div></div>
+
+  <section id="projetos" class="projects">
+    <div class="projects__head">
+      <h2 class="projects__title" data-i18n="projects">Projetos</h2>
+      <div class="filters" role="group" aria-label="Filtrar por tipo" data-i18n-aria="filterLabel">
+        <button type="button" class="filter" data-filter="all" aria-pressed="true" data-i18n="all">Todos</button>
+        <button type="button" class="filter" data-filter="app" aria-pressed="false" data-i18n="apps">Apps</button>
+        <button type="button" class="filter" data-filter="game" aria-pressed="false" data-i18n="games">Jogos</button>
+        <button type="button" class="filter" data-filter="site" aria-pressed="false">Web</button>
+      </div>
+    </div>
+
+    <article class="feature" id="destaque">
+      <div class="feature__media">
+        <video class="feature__video" muted loop playsinline aria-hidden="true"></video>
+        <div class="feature__placeholder" hidden><span data-i18n="noPreview">Prévia em breve</span></div>
+        <span class="feature__year" hidden></span>
+      </div>
+      <div class="feature__info">
+        <span class="chip feature__status"></span>
+        <h3 class="feature__name"></h3>
+        <p class="feature__desc"></p>
+        <div class="feature__meta">
+          <div><span class="feature__label" data-i18n="plat">Plataformas</span><span class="feature__value feature__plat"></span></div>
+          <div><span class="feature__label" data-i18n="type">Tipo</span><span class="feature__value feature__types"></span></div>
+        </div>
+        <div class="feature__tech"></div>
+        <a class="feature__cta" target="_blank" rel="noopener" hidden></a>
+      </div>
+    </article>
+
+    <div class="group group--live">
+      <div class="group__head">
+        <h3 class="group__title" data-i18n="released">Lançados</h3>
+        <span class="group__rule"></span>
+      </div>
+      <div class="stickers"></div>
+    </div>
+
+    <div class="group group--next">
+      <div class="group__head" id="proximos">
+        <h3 class="group__title" data-i18n="upcoming">Em desenvolvimento e em breve</h3>
+        <span class="group__rule"></span>
+      </div>
+      <div class="stickers"></div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <div class="about__dots" aria-hidden="true"></div>
+    <div class="about__inner">
+      <div class="about__top">
+        <div class="about__intro">
+          <span class="chip chip--lime" data-i18n="about">Sobre a Cyberhat</span>
+          <p class="about__lead" data-i18n="aboutLead">Começou com jogos. Hoje, tudo o que o estúdio cria leva o nome Cyberhat.</p>
+        </div>
+        <p class="about__body" data-i18n="aboutBody">A Cyberhat começou em 2017 como um estúdio de jogos independentes, e o primeiro jogo nasceu numa Game Jam. Depois vieram os apps e os sites, e cada projeto ganhou uma identidade visual própria.</p>
+      </div>
+      <div class="timeline">
+        <h3 class="timeline__title" data-i18n="launches">Lançamentos</h3>
+        <div class="timeline__scroll" data-tl-scroll>
+          <ol class="timeline__track"></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__dots" aria-hidden="true"></div>
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img class="footer__logo" src="assets/logo-gf.png" alt="" width="922" height="696" loading="lazy">
+      <span class="footer__name">CYBERHAT</span>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__links">
+        <a class="footer__link" href="#projetos" data-i18n="navProjects">Projetos</a>
+        <a class="footer__link" href="#sobre" data-i18n="navAbout">Sobre</a>
+        <div class="lang lang--footer" role="group" aria-label="Idioma" data-i18n-aria="langLabel">
+          <button type="button" class="lang__btn" data-lang="pt" aria-pressed="true">PT</button>
+          <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <span class="footer__copy">© <span data-year>2026</span> Cyberhat · cyberhat.com.br</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+# cyberhat.com.br
+#
+# Os redirecionamentos checam o host, para não afetar subdomínios (portfolio., beebee. ...)
+# caso as pastas deles fiquem dentro desta. Options, compressão e cache valem para elas também.
+
+Options -Indexes
+
+# --- HTTPS forçado e www -> sem www ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{HTTP_HOST} ^www\.cyberhat\.com\.br$ [NC]
+  RewriteRule ^ https://cyberhat.com.br%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^cyberhat\.com\.br$ [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://cyberhat.com.br%{REQUEST_URI} [R=301,L]
+
+  # Arquivos do repositório que não fazem parte do site
+  RewriteRule (^|/)\.git - [F,L]
+  RewriteRule \.md$ - [F,L,NC]
+</IfModule>
+
+# --- Tipos MIME ---
+AddType video/webm .webm
+AddType image/x-icon .ico
+
+# --- Compressão ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml image/x-icon
+</IfModule>
+
+# --- Cache ---
+# HTML, CSS e JS sempre revalidam: sem build, os nomes dos arquivos não mudam entre versões.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType video/webm "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 0 seconds"
+  ExpiresByType text/javascript "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webm|png|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
