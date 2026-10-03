@@ -7,7 +7,8 @@ index.html            página única (abertura, projetos, sobre, rodapé)
 css/style.css         estilos
 js/data.js            projetos e textos PT/EN
 js/main.js            idioma, filtro, painel em destaque, adesivos, linha do tempo
-assets/               emblema da Cyberhat (logo-gf.png) e versão pequena (logo-gf-sm.png)
+assets/               emblema: logo-gf.webp (usado na página, 480 px), logo-gf.png
+                      (original 922x696, base dos ícones) e logo-gf-sm.png (128 px)
 videos/*.webm         prévias dos projetos
 favicon.ico           ícone da aba (16, 32 e 48 px)
 apple-touch-icon.png  ícone da tela inicial no iPhone (180 px)
