@@ -32,7 +32,6 @@ O idioma escolhido fica salvo no navegador.
 Enviar todo o conteúdo desta pasta para a raiz de `cyberhat.com.br` (a pasta `public_html` dele),
 mantendo as pastas. O `.htaccess` é um arquivo oculto: confira se ele foi junto.
 
-## Pendências
+---
 
-- Contato da Cyberhat (e-mail ou redes) ainda não foi definido; o rodapé está sem contato.
-- Revisar descrições e frases dos projetos (vieram do portfólio).
+Feito por [Vinícius Costa Magalhães](https://portfolio.cyberhat.com.br) · [Cyberhat](https://cyberhat.com.br)
